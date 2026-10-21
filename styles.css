@@ -215,3 +215,7 @@ p { margin: 0 0 1em; }
   .form { padding: 22px; }
   .form__row { grid-template-columns: 1fr; }
 }
+
+/* Legal notes */
+.contact__note { font-size: 16px !important; }
+.form__disclaimer { font-size: 13px; color: var(--muted); margin: 0; }

@@ -1,6 +1,11 @@
-# Be Human AI — Landing Page
+# Law Firm — Landing Page
 
-Static landing page for **Be Human AI**, an AI consulting company. No build step required.
+Static landing page for a law firm / attorney. No build step required.
+
+**Before going live**, replace the placeholders: the firm name ("Your Law Firm"),
+the phone number `(555) 555-5555` (in `index.html` and `thanks.html`), and the
+practice areas to match what you actually offer. Check the footer disclaimer with
+your state bar's advertising rules.
 
 ## Files
 - `index.html` — the landing page
@@ -12,7 +17,7 @@ Static landing page for **Be Human AI**, an AI consulting company. No build step
 ## Deploy to Netlify
 1. In Netlify, choose **Add new site → Import an existing project** and pick this repo.
 2. Branch: `main`. Build command: *(leave empty)*. Publish directory: `.`
-3. Deploy. The contact form uses **Netlify Forms** and is detected automatically —
+3. Deploy. The consultation form uses **Netlify Forms** and is detected automatically —
    submissions appear under **Forms** in the Netlify dashboard.
 
 ## Local preview
