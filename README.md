@@ -11,6 +11,7 @@ your state bar's advertising rules.
 - `index.html` — the landing page
 - `styles.css` — styles (dark theme, cyan / magenta / indigo accents)
 - `script.js` — mobile nav, scroll reveal, footer year
+- `theme.js` — Light / Dark / System theme switcher (choice saved in the browser)
 - `thanks.html` — shown after the contact form is submitted
 - `netlify.toml` — Netlify config (publish directory and headers)
 
@@ -25,3 +26,8 @@ your state bar's advertising rules.
 python3 -m http.server 8000
 ```
 Then open http://localhost:8000.
+
+## Roadmap
+Each phase ends with a quality check before the next one starts.
+
+- **Phase 0 — Themes (done):** Light, Dark and System themes with a switcher in the header.
