@@ -1,1 +1,22 @@
-# MynewApp
+# Be Human AI — Landing Page
+
+Static landing page for **Be Human AI**, an AI consulting company. No build step required.
+
+## Files
+- `index.html` — the landing page
+- `styles.css` — styles (dark theme, cyan / magenta / indigo accents)
+- `script.js` — mobile nav, scroll reveal, footer year
+- `thanks.html` — shown after the contact form is submitted
+- `netlify.toml` — Netlify config (publish directory and headers)
+
+## Deploy to Netlify
+1. In Netlify, choose **Add new site → Import an existing project** and pick this repo.
+2. Branch: `main`. Build command: *(leave empty)*. Publish directory: `.`
+3. Deploy. The contact form uses **Netlify Forms** and is detected automatically —
+   submissions appear under **Forms** in the Netlify dashboard.
+
+## Local preview
+```bash
+python3 -m http.server 8000
+```
+Then open http://localhost:8000.
