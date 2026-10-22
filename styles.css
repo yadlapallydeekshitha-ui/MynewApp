@@ -243,19 +243,27 @@ p { margin: 0 0 1em; }
   .gap__divider { width: 64px; height: 2px; align-self: auto; }
   .contact { grid-template-columns: 1fr; gap: 32px; }
 }
-@media (max-width: 720px) {
-  .container { padding: 0 16px; }
+/* Tablets: two practice-area cards per row */
+@media (min-width: 600px) and (max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+/* Collapse the nav before the links and theme switcher stop fitting on one row */
+@media (max-width: 960px) {
   .nav__toggle { display: block; }
   .nav__right { margin-left: auto; gap: 8px; }
   .nav__links {
     position: absolute; top: 72px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
     background: var(--bg); border-bottom: 1px solid var(--border);
-    padding: 8px 16px 20px; display: none;
+    padding: 8px 24px 20px; display: none;
   }
   .nav__links.is-open { display: flex; }
   .nav__links a:not(.btn) { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav__links .btn { margin-top: 16px; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 16px; }
+  .nav__links { padding: 8px 16px 20px; }
   .hero { padding: 72px 0 80px; }
   .section { padding: 72px 0; }
   .form { padding: 22px; }
@@ -282,3 +290,9 @@ p { margin: 0 0 1em; }
 .theme-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .theme-switch svg { width: 16px; height: 16px; }
 .theme-switch--floating { position: fixed; top: 16px; right: 16px; z-index: 10; }
+@media (max-width: 380px) {
+  .nav__inner { gap: 12px; }
+  .logo { font-size: 20px; }
+  .theme-switch button { width: 28px; height: 28px; }
+  .nav__toggle { padding: 6px; }
+}

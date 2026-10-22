@@ -31,3 +31,4 @@ Then open http://localhost:8000.
 Each phase ends with a quality check before the next one starts.
 
 - **Phase 0 — Themes (done):** Light, Dark and System themes with a switcher in the header.
+  Responsive from 320px phones through tablets to 1920px desktops.
