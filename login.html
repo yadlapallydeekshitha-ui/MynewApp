@@ -53,11 +53,35 @@
         <p class="eyebrow">Welcome back</p>
         <h1 id="profile-name" class="profile__name"></h1>
         <p id="profile-email" class="profile__email"></p>
+        <p id="profile-phone" class="profile__email" hidden></p>
+        <p id="profile-bio" class="profile__bio" hidden></p>
+        <p id="profile-saved" class="profile__saved" role="status" hidden>Profile saved.</p>
         <div class="auth__actions">
-          <a href="/" class="btn btn--primary">Go to home</a>
+          <button type="button" id="edit-profile" class="btn btn--primary">Create your profile</button>
+          <a href="/" class="btn btn--ghost">Go to home</a>
           <button type="button" id="sign-out" class="btn btn--ghost">Sign out</button>
         </div>
       </section>
+
+      <form id="profile-form" class="form profile-form" hidden novalidate>
+        <h1 id="profile-form-title">Create your profile</h1>
+        <label>Display name
+          <input type="text" name="display_name" maxlength="80" required autocomplete="name" />
+        </label>
+        <label>Profile picture URL
+          <input type="url" name="display_avatar_url" maxlength="500" placeholder="https://…" autocomplete="photo" />
+        </label>
+        <label>Phone
+          <input type="tel" name="phone_number" maxlength="30" autocomplete="tel" />
+        </label>
+        <label>About you
+          <textarea name="bio" rows="3" maxlength="500"></textarea>
+        </label>
+        <div class="auth__actions">
+          <button type="submit" id="profile-save" class="btn btn--primary">Save profile</button>
+          <button type="button" id="profile-cancel" class="btn btn--ghost">Cancel</button>
+        </div>
+      </form>
 
       <p id="auth-error" class="auth__error" role="alert" hidden></p>
       <a href="/" class="link auth__back" id="back-link">&larr; Back to home</a>

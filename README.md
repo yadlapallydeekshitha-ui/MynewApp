@@ -15,7 +15,11 @@ your state bar's advertising rules.
 - `thanks.html` — shown after the contact form is submitted
 - `login.html` — log in page with **Continue with Google** (Supabase Auth). After sign-in it shows the
   user's name and profile picture from `user_metadata`
-- `auth.js` — Supabase sign-in / sign-out logic for `login.html`
+- `auth.js` — Supabase sign-in / sign-out and create / edit profile for `login.html`.
+  Profile fields (`display_name`, `display_avatar_url`, `phone_number`, `bio`) are saved to the
+  user's Supabase `user_metadata`; separate keys are used because Google refreshes `full_name` /
+  `avatar_url` on each sign-in
+- `nav-auth.js` — swaps the nav "Log in" link for "Profile" + "Sign out" when signed in
 - `supabase-config.js` — Supabase project URL and anon key
 - `netlify.toml` — Netlify config (publish directory and headers)
 

@@ -8,7 +8,14 @@
     auth: { flowType: 'pkce', detectSessionInUrl: false, persistSession: true }
   });
 
+  var profileLink = document.createElement('a');
+  profileLink.href = '/login.html';
+  profileLink.textContent = 'Profile';
+  profileLink.hidden = true;
+  link.parentNode.insertBefore(profileLink, link);
+
   function render(session) {
+    profileLink.hidden = !session;
     if (session) {
       link.textContent = 'Sign out';
       link.setAttribute('href', '#');
